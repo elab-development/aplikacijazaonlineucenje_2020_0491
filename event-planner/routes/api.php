@@ -60,5 +60,5 @@ Route::group(['middleware' => ['auth:sanctum']], function () {
     Route::resource('/events', EventController::class)
         ->only(['store', 'update', 'destroy']);
 
-    Route::post('/logout', [AuthController::class, 'logout']);
+    Route::post('/logout', [AuthorizationController::class, 'logout']);
 });
