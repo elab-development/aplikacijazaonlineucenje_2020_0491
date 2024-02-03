@@ -14,12 +14,12 @@ const SearchForm = () => {
   useEffect(() => searchText.current.focus(), []);
   const handleSubmit = (e) => {
     e.preventDefault();
-    let tempSearchTerm = searchText.current.valueOf.trim();
-    if (tempSearchTerm.replace(/[^\w\s]/gi, "").length === 0) {
+    let tempSearchTerm = searchText.current.value.trim();
+    if (tempSearchTerm.replace(/[^\w\s]/gi, "").length == 0) {
       setSearchTerm("lord of the rings");
       setResultTitle("Please Enter Something ...");
     } else {
-      setSearchTerm(searchText.current.valueOf);
+      setSearchTerm(searchText.current.value);
     }
 
     navigate("/book");
