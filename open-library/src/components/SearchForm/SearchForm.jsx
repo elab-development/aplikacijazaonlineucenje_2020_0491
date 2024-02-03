@@ -15,7 +15,7 @@ const SearchForm = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     let tempSearchTerm = searchText.current.value.trim();
-    if (tempSearchTerm.replace(/[^\w\s]/gi, "").length == 0) {
+    if (tempSearchTerm.replace(/[^\w\s]/gi, "").length === 0) {
       setSearchTerm("lord of the rings");
       setResultTitle("Please Enter Something ...");
     } else {
